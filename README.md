@@ -2,14 +2,23 @@
 An AI-powered crowd monitoring system that uses YOLOv8, OpenCV, and Flask to detect, count, and monitor people in real time from images and videos. The system analyzes crowd density, generates alerts when predefined thresholds are exceeded, and provides live visualization through a web-based dashboard.
 
 🎯 Features
+
 -Real-time person detection using YOLOv8
+
 -Crowd counting from images and videos
+
 -Crowd density classification (Safe, Moderate, High, Critical)
+
 -Adjustable density threshold
+
 -Dashboard-based monitoring interface
+
 -Real-time crowd statistics visualization
+
 -Sound alarm alerts
+
 -Mobile push notifications
+
 -Unique person tracking in video streams
 
 🛠 Technologies Used
