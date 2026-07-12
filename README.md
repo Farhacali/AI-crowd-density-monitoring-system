@@ -1,37 +1,40 @@
-# AI-crowd-density-monitoring-system
-An AI-powered crowd monitoring system that uses YOLOv8, OpenCV, and Flask to detect, count, and monitor people in real time from images and videos. The system analyzes crowd density, generates alerts when predefined thresholds are exceeded, and provides live visualization through a web-based dashboard.
+# AI Crowd Density Monitoring System
 
-🎯 Features
+An AI-powered crowd monitoring system that uses **YOLOv8**, **OpenCV**, and **Flask** to detect, count, and monitor people in real time from images and videos. The system analyzes crowd density, generates alerts when predefined thresholds are exceeded, and provides live visualization through a web-based dashboard.
 
--Real-time person detection using YOLOv8
+---
 
--Crowd counting from images and videos
+## 🎯 Features
 
--Crowd density classification (Safe, Moderate, High, Critical)
+- Real-time person detection using YOLOv8
+- Crowd counting from images and videos
+- Crowd density classification (Safe, Moderate, High, Critical)
+- Adjustable density threshold
+- Dashboard-based monitoring interface
+- Real-time crowd statistics visualization
+- Sound alarm alerts
+- Mobile push notifications
+- Unique person tracking in video streams
 
--Adjustable density threshold
+---
 
--Dashboard-based monitoring interface
+## 🛠️ Technologies Used
 
--Real-time crowd statistics visualization
+- Python
+- YOLOv8 (Ultralytics)
+- OpenCV
+- PyTorch
+- Flask
+- HTML
+- CSS
+- JavaScript
+- Chart.js
 
--Sound alarm alerts
+---
 
--Mobile push notifications
+## 📂 Project Structure
 
--Unique person tracking in video streams
-
-🛠 Technologies Used
--Python
--YOLOv8 (Ultralytics)
--OpenCV
--PyTorch
--Flask
--HTML/CSS
--JavaScript
--Chart.js
-
-📂 Project Structure
+```
 AI-CROWD-DENSITY-MONITORING-SYSTEM/
 │
 ├── app.py
@@ -45,55 +48,90 @@ AI-CROWD-DENSITY-MONITORING-SYSTEM/
 │   └── demo_video.mp4
 │
 └── README.md
+```
 
-⚙️ How It Works
--Upload an image or video, or connect a live video feed.
--YOLOv8 detects all persons in each frame.
--The system counts detected individuals.
--Crowd density is evaluated against a predefined threshold.
+---
 
-If overcrowding is detected:
--Dashboard alert is displayed
--Alarm sound is triggered
--Mobile notification is sent
--Results are visualized through the monitoring dashboard.
+## ⚙️ How It Works
 
-📊 Results
-Metric	    Value
-Precision   87.16%
-Recall	    85.82%
-mAP@50	    90.19%
-mAP@50-95	  76.37%
+1. Upload an image or video, or connect a live video feed.
+2. YOLOv8 detects all persons in each frame.
+3. The system counts detected individuals.
+4. Crowd density is evaluated against a predefined threshold.
 
-🚀 Installation
-Clone the repository:
+### If overcrowding is detected:
+
+- Dashboard alert is displayed.
+- Alarm sound is triggered.
+- Mobile notification is sent.
+- Results are visualized through the monitoring dashboard.
+
+---
+
+## 📊 Results
+
+| Metric | Value |
+|---------|------:|
+| Precision | 87.16% |
+| Recall | 85.82% |
+| mAP@50 | 90.19% |
+| mAP@50-95 | 76.37% |
+
+---
+
+## 🚀 Installation
+
+### Clone the repository
+
+```bash
 git clone https://github.com/your-username/ai-crowd-density-monitoring-system.git
 cd ai-crowd-density-monitoring-system
+```
 
-Install dependencies:
+### Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Run the application:
+### Run the application
+
+```bash
 python app.py
+```
 
-Open your browser and visit:
+### Open your browser
+
+```
 http://127.0.0.1:5000
+```
 
-📸 Screenshots
+---
+
+## 📸 Screenshots
+
 Add screenshots of:
--Person detection on image
--Crowd counting on video
--Overcrowding alert
--Dashboard visualization
--Mobile notification
 
-🔮 Future Improvements
--Crowd behavior analysis
--Violence detection
--Multi-camera tracking
--Edge device deployment
--Smart city integration
--Predictive crowd analytics
+- Person detection on an image
+- Crowd counting on a video
+- Overcrowding alert
+- Dashboard visualization
+- Mobile notification
 
-👩‍💻 Author
-Farha C Ali B.Tech Artificial Intelligence & Data Science
+---
+
+## 🔮 Future Improvements
+
+- Crowd behavior analysis
+- Violence detection
+- Multi-camera tracking
+- Edge device deployment
+- Smart city integration
+- Predictive crowd analytics
+
+---
+
+## 👩‍💻 Author
+
+**Farha C Ali**  
+B.Tech Artificial Intelligence & Data Science
