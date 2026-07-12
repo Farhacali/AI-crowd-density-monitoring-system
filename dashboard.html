@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>AI Crowd Density Monitoring</title> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+<style> 
+body{
+  background:#0f172a; 
+color:white; 
+font-family:Arial; 
+text-align:center; 
+} 
+.container{ 
+display:grid; 
+grid-template-columns:2fr 1fr; 
+gap:20px; 
+padding:20px; 
+} 
+.card{ 
+background:#1e293b; 
+padding:20px; 
+border-radius:10px; 
+} 
+.alert{ 
+background:red; 
+padding:10px; 
+display:none; 
+margin-top:10px; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>AI Crowd Density Monitoring</h1> 
+<div class="container"> 
+<div class="card"> 
+<img src="/video" width="100%"> 
+</div> 
+<div class="card"> 
+<h2>Controls</h2> 
+Density Threshold (0-200) 
+<br><br> 
+<input type="range" 
+min="0"
+  max="200" 
+value="30" 
+id="slider"> 
+<p id="value">30</p> 
+<div id="alert" class="alert"> 
+⚠ CROWD LIMIT EXCEEDED 
+</div> 
+<canvas id="chart"></canvas> 
+</div> 
+</div> 
+<script> 
+const slider=document.getElementById("slider") 
+const value=document.getElementById("value") 
+slider.oninput=function(){ 
+value.innerHTML=this.value 
+fetch("/set_threshold",{ 
+method:"POST", 
+headers:{ 
+"Content-Type":"application/x-www-form-urlencoded" 
+}, 
+body:"value="+this.value 
+}) 
+} 
+let ctx=document.getElementById("chart") 
+let chart=new Chart(ctx,{ 
+type:'line', 
+data:{ 
+labels:[], 
+datasets:[{ 
+label:'People Count', 
+data:[], 
+borderWidth:2 
+}] 
+} 
+}) 
+function update(){ 
+  fetch("/count") 
+.then(res=>res.json()) 
+.then(data=>{ 
+let count=data.count 
+chart.data.labels.push("") 
+chart.data.datasets[0].data.push(count) 
+if(chart.data.labels.length>30){ 
+chart.data.labels.shift() 
+chart.data.datasets[0].data.shift() 
+} 
+chart.update() 
+if(count>slider.value){ 
+document.getElementById("alert").style.display="block" 
+}else{ 
+document.getElementById("alert").style.display="none" 
+} 
+}) 
+} 
+setInterval(update,1000) 
+</script> 
+</body> 
+</html>
