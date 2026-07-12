@@ -2,25 +2,25 @@
 An AI-powered crowd monitoring system that uses YOLOv8, OpenCV, and Flask to detect, count, and monitor people in real time from images and videos. The system analyzes crowd density, generates alerts when predefined thresholds are exceeded, and provides live visualization through a web-based dashboard.
 
 🎯 Features
-Real-time person detection using YOLOv8
-Crowd counting from images and videos
-Crowd density classification (Safe, Moderate, High, Critical)
-Adjustable density threshold
-Dashboard-based monitoring interface
-Real-time crowd statistics visualization
-Sound alarm alerts
-Mobile push notifications
-Unique person tracking in video streams
+-Real-time person detection using YOLOv8
+-Crowd counting from images and videos
+-Crowd density classification (Safe, Moderate, High, Critical)
+-Adjustable density threshold
+-Dashboard-based monitoring interface
+-Real-time crowd statistics visualization
+-Sound alarm alerts
+-Mobile push notifications
+-Unique person tracking in video streams
 
 🛠 Technologies Used
-Python
-YOLOv8 (Ultralytics)
-OpenCV
-PyTorch
-Flask
-HTML/CSS
-JavaScript
-Chart.js
+-Python
+-YOLOv8 (Ultralytics)
+-OpenCV
+-PyTorch
+-Flask
+-HTML/CSS
+-JavaScript
+-Chart.js
 
 📂 Project Structure
 AI-CROWD-DENSITY-MONITORING-SYSTEM/
@@ -38,16 +38,16 @@ AI-CROWD-DENSITY-MONITORING-SYSTEM/
 └── README.md
 
 ⚙️ How It Works
-Upload an image or video, or connect a live video feed.
-YOLOv8 detects all persons in each frame.
-The system counts detected individuals.
-Crowd density is evaluated against a predefined threshold.
+-Upload an image or video, or connect a live video feed.
+-YOLOv8 detects all persons in each frame.
+-The system counts detected individuals.
+-Crowd density is evaluated against a predefined threshold.
 
 If overcrowding is detected:
-Dashboard alert is displayed
-Alarm sound is triggered
-Mobile notification is sent
-Results are visualized through the monitoring dashboard.
+-Dashboard alert is displayed
+-Alarm sound is triggered
+-Mobile notification is sent
+-Results are visualized through the monitoring dashboard.
 
 📊 Results
 Metric	    Value
@@ -72,19 +72,19 @@ http://127.0.0.1:5000
 
 📸 Screenshots
 Add screenshots of:
-Person detection on image
-Crowd counting on video
-Overcrowding alert
-Dashboard visualization
-Mobile notification
+-Person detection on image
+-Crowd counting on video
+-Overcrowding alert
+-Dashboard visualization
+-Mobile notification
 
 🔮 Future Improvements
-Crowd behavior analysis
-Violence detection
-Multi-camera tracking
-Edge device deployment
-Smart city integration
-Predictive crowd analytics
+-Crowd behavior analysis
+-Violence detection
+-Multi-camera tracking
+-Edge device deployment
+-Smart city integration
+-Predictive crowd analytics
 
 👩‍💻 Author
 Farha C Ali B.Tech Artificial Intelligence & Data Science
